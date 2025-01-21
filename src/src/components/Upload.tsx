@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import { storage } from '../firebase';
-import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
+import { ref, getDownloadURL, uploadBytesResumable } from 'firebase/storage';
 import { User } from 'firebase/auth';
 
 interface UploadProps {
@@ -24,22 +24,34 @@ const Upload = ({ user }: UploadProps) => {
       const fileName = `${Date.now()}-${file.name}`;
       const storageRef = ref(storage, `users/${user.uid}/photos/${fileName}`);
 
-      // Upload the file
-      await uploadBytes(storageRef, file);
-      
-      // Get the download URL
-      const downloadURL = await getDownloadURL(storageRef);
-      
-      // Here you could save the downloadURL to Firestore if you want to keep track of user's photos
-      console.log('File uploaded successfully:', downloadURL);
-      
-      // Reset the file input
-      if (fileInputRef.current) {
-        fileInputRef.current.value = '';
-      }
+      // Create upload task
+      const uploadTask = uploadBytesResumable(storageRef, file);
+
+      // Listen for state changes and progress
+      uploadTask.on('state_changed', 
+        (snapshot) => {
+          const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+          setUploadProgress(progress);
+        },
+        (error) => {
+          console.error('Error uploading file:', error);
+          setUploading(false);
+        },
+        async () => {
+          // Get the download URL
+          const downloadURL = await getDownloadURL(uploadTask.snapshot.ref);
+          console.log('File uploaded successfully:', downloadURL);
+          
+          // Reset the file input
+          if (fileInputRef.current) {
+            fileInputRef.current.value = '';
+          }
+          setUploading(false);
+          setUploadProgress(0);
+        }
+      );
     } catch (error) {
       console.error('Error uploading file:', error);
-    } finally {
       setUploading(false);
       setUploadProgress(0);
     }
@@ -111,6 +123,17 @@ const Upload = ({ user }: UploadProps) => {
                   Uploading...
                 </span>
               </div>
+              <div className="text-right">
+                <span className="text-xs font-semibold inline-block text-[#0071e3]">
+                  {Math.round(uploadProgress)}%
+                </span>
+              </div>
+            </div>
+            <div className="overflow-hidden h-2 mb-4 text-xs flex rounded bg-blue-100">
+              <div
+                style={{ width: `${uploadProgress}%` }}
+                className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-[#0071e3] transition-all duration-300"
+              />
             </div>
           </div>
         </div>

@@ -5,9 +5,9 @@ Jan Frey
 | Datum | Version | Zusammenfassung                                              |
 | ----- | ------- | ------------------------------------------------------------ |
 |  10.01.2025    | 0.0.0   | Start des Projektes - Informieren, Planen, Entscheiden. Doku erstellt. |
-|17.01.2025|||
-|24.01.2025|||
-|14.02.2025|||
+|17.01.2025|0.0.1|Lernen von Gsap und Windsurf|
+|24.01.2025|0.1.0|Veröffentlichung erster Website mit Login page und vorübergehender Uploadfunktion|
+|14.02.2025|0.1.1|Arbeit an Uploadfunktion|
 |21.02.2025|||
 |28.02.2025|||
 |07.03.2024|||

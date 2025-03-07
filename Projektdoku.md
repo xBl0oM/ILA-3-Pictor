@@ -8,9 +8,9 @@ Jan Frey
 |17.01.2025|0.0.1|Lernen von Gsap und Windsurf|
 |24.01.2025|0.1.0|Veröffentlichung erster Website mit Login page und vorübergehender Uploadfunktion|
 |14.02.2025|0.1.1|Arbeit an Uploadfunktion|
-|21.02.2025|||
-|28.02.2025|||
-|07.03.2024|||
+|21.02.2025|0.1.2|Arbeit an Uploadfunktion und Bugfixes|
+|28.02.2025|0.2.1|Arbeit an Uploadfunktion und Bugfixes|
+|07.03.2024|1.0.0|Projekt abschliessen und veröffentlichen, Portfolio eintrag schreiben.|
 
 
 ## 1 Informieren

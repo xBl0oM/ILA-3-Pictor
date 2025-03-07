@@ -139,21 +139,38 @@ Total: 20 Stunden
 
 ---
 
-### 4. Realisieren
+## 4. Realisieren
 
-| AP-№ | Datum   | Zuständig               | Geplante Zeit | Tatsächliche Zeit |
-|------|---------|-------------------------|---------------|-------------------|
-| |   |                |     |         |
+| AP-№ | Datum      | Zuständig | Geplante Zeit (h) | Tatsächliche Zeit (h) |
+|------|------------|-----------|-------------------|-----------------------|
+| 1.1  | 17.01.2025 | Jan Frey  | 2                 | 2                     |
+| 1.2  | 17.01.2025 | Jan Frey  | 3                 | 3                     |
+| 2.1  | 24.01.2025 | Jan Frey  | 2                 | 2                     |
+| 2.2  | 24.01.2025 | Jan Frey  | 2                 | 2,5                   |
+| 2.3  | 24.01.2025 | Jan Frey  | 1                 | 1                     |
+| 3.1  | 28.02.2025 | Jan Frey  | 5                 | 8                     |
+| 3.2  | 28.02.2025 | Jan Frey  | 5                 | 8                    |
+| 4.1  | 07.03.2025 | Jan Frey  | 1                 | 2                     |
+| 5.1  | 07.03.2025 | Jan Frey  | 4                 | 4                 |
 
-
-## 5 Kontrollieren
+## 5. Kontrollieren
 
 ### 5.1 Testprotokoll
 
-
-| TC-№ | Datum       | Resultat | Tester         |
-|------|-------------|----------|----------------|
-| |  |      |  |
+| TC-№ | Datum      | Resultat                                                                                                     | Tester   |
+|------|------------|--------------------------------------------------------------------------------------------------------------|----------|
+| 1    | 24.01.2025 | Erfolgreich: Benutzer wurde eingeloggt und zur Galerie weitergeleitet.                                       | Jan Frey |
+| 2    | 24.01.2025 | Erfolgreich: Fehlermeldung „Ungültige Anmeldedaten“ wurde korrekt angezeigt.                                 | Jan Frey |
+| 3    | 21.02.2025 | Erfolgreich: Foto wurde hochgeladen und in der Galerie angezeigt.                                            | Jan Frey |
+| 4    | 21.02.2025 | Erfolgreich: Foto wurde gelöscht und aus Firebase entfernt.                                                  | Jan Frey |
+| 5    | 21.02.2025 | Erfolgreich: Alle Fotos wurden korrekt in einer Gitteransicht dargestellt.                                    | Jan Frey |
+| 6    | 21.02.2025 | Erfolgreich: Nachricht „Keine Fotos vorhanden“ wurde angezeigt, wenn keine Fotos vorhanden waren.             | Jan Frey |
+| 7    | 21.02.2025 | Erfolgreich: Ladeanimation wurde während des Uploads angezeigt.                                               | Jan Frey |
+| 8    | 21.02.2025 | Erfolgreich: Beschreibung wurde erfolgreich gespeichert und unter dem Foto angezeigt.                         | Jan Frey |
+| 9    | 28.02.2025 | Erfolgreich: Suchfunktion filterte Fotos korrekt.                                                            | Jan Frey |
+| 10   | 24.01.2025 | Erfolgreich: Logout funktionierte, und der Benutzer wurde zur Login-Seite weitergeleitet.                       | Jan Frey |
+| 11   | 07.03.2025 | Erfolgreich: Deployment abgeschlossen – Frontend und Backend sind öffentlich zugänglich.                       | Jan Frey |
+| 12   | 07.03.2025 | Erfolgreich: Responsive Darstellung der Galerie und Funktionen auf mobilen Geräten wurde bestätigt.            | Jan Frey |
 
 
 

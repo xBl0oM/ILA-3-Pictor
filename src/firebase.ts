@@ -7,7 +7,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyCpjH5wdR5MfBWQWiQlBupOQK6dom_Zc1M",
   authDomain: "pictor-72df1.firebaseapp.com",
   projectId: "pictor-72df1",
-  storageBucket: "pictor-72df1.appspot.com",
+  storageBucket: "pictor-72df1.firebasestorage.app",
   messagingSenderId: "297917385434",
   appId: "1:297917385434:web:9b7fdbbab4f8043b9433e3",
   measurementId: "G-DYP89QY55X"

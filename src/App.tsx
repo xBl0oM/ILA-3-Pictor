@@ -7,7 +7,6 @@ import Dashboard from './Dashboard';
 
 const App = () => {
   useEffect(() => {
-    // Initialize Firebase Analytics
     initAnalytics().catch(console.error);
   }, []);
 

@@ -49,7 +49,7 @@ const Dashboard = () => {
 
   return (
     <>
-      <Navbar user={user} />
+      <Navbar/>
       <div className="min-h-screen pt-16 bg-[#f5f5f7] p-8 mt-5">
         <div className="max-w-4xl mx-auto">
           <div className="flex justify-between items-center mb-8">
@@ -68,12 +68,6 @@ const Dashboard = () => {
               Sign Out
             </button>
           </div>
-          <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
-            <p className="text-gray-600">
-              You're successfully logged in to your account. Your photos will appear here soon!
-            </p>
-          </div>
-          {/* Upload Component */}
           <Upload user={user} />
         </div>
       </div>

@@ -1,2 +1,2 @@
 # Pictor-Ila-3
-Pictor ist eine Online-fotogalerie, die es dem Benutzer ermöglicht Fotos online zu speichern.
+Pictor is a Web-Foto-gallery, allowing Users to store fotos online.
